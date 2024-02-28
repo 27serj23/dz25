@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="E:/312/SQLite/dz32/DZ32sqlite.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="2"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="79"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="0,0:"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">/*1.
+Создать таблицу группа (имя, рейтинг, курс)
+добавить 3 любые группы 
+*показать группы(имя, рейтинг и курс)  рейтинг, которых меньше либо равен 50*/
+CREATE TABLE group (
+    name TEXT,
+    rating INTEGER,
+    course TEXT
+);
+
+--INSERT INTO group (name, rating, course) VALUES ('Group 1', 45, 'Beginner');
+/*INSERT INTO group (name, rating, course) VALUES ('Group 2', 60, 'Intermediate');
+INSERT INTO group (name, rating, course) VALUES ('Group 3', 40, 'Advanced');*/
+
+--SELECT name, rating, course FROM group WHERE rating &lt;= 50;
+
+/*2.
+Создать таблицу оружие(имя, тип, мощность)
+добавить 3 любых оружия
+показать оружия(имя, тип и мощность) мощность, которых равна 200*/
+CREATE TABLE weapons (
+    name TEXT,
+    type TEXT,
+    power INTEGER
+);
+
+/*INSERT INTO weapons (name, type, power) VALUES ('AK-47', 'Assault Rifle', 250);
+INSERT INTO weapons (name, type, power) VALUES ('M1911', 'Pistol', 150);
+INSERT INTO weapons (name, type, power) VALUES ('Mossberg 500', 'Shotgun', 200);*/
+
+--SELECT name, type, power FROM weapons WHERE power = 200;
+
+/*5.
+Создать таблицу занятие (тип, дата, стоимость)
+добавить 3 любых занятия
+показать все занятия, тип которых соответствует английский*/
+CREATE TABLE занятие (
+    id INTEGER PRIMARY KEY,
+    тип TEXT,
+    дата DATE,
+    стоимость INTEGER
+);
+
+/*INSERT INTO занятие (тип, дата, стоимость) VALUES ('английский', '2022-01-10', 500);
+INSERT INTO занятие (тип, дата, стоимость) VALUES ('математика', '2022-01-12', 600);
+INSERT INTO занятие (тип, дата, стоимость) VALUES ('английский', '2022-01-15', 500);*/
+
+--SELECT * FROM занятие WHERE тип = 'английский';
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
